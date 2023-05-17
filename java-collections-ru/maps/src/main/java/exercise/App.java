@@ -3,37 +3,54 @@ package exercise;
 import java.util.*;
 
 // BEGIN
+
+/**
+ *
+ *
+ *
+ */
 class App {
+    /**
+     * Метод принимает преложение sentence и возвращает словарь слов и их частоты в предложении
+     * @param sentence Исходное предложение
+     * @return Возвращает словарь, где ключи - слова, а значение - частота появления в предложении
+     */
     public static Map<String, Integer> getWordCount(String sentence) {
-        List<String> words = new ArrayList<>(Arrays.asList(sentence.split(" ")));
+        String[] words = sentence.split(" ");
         Map<String, Integer> result = new HashMap<>();
 
-        if (sentence.equals("")) {
+        if (sentence.length() == 0) {
             return result;
         }
 
         for (String word: words) {
-            if (result.containsKey(word)) {
-                Integer value = result.get(word);
-                result.replace(word, value + 1);
-            } else {
-                result.put(word, 1);
-            }
+            int wordCount = result.getOrDefault(word, 0);
+            wordCount++;
+            result.put(word, wordCount);
+
         }
+
         return result;
     }
 
     public static String toString(Map<String, Integer> words) {
         StringBuilder result = new StringBuilder();
 
+        result.append("{");
+
         if (!words.isEmpty()) {
             for (Map.Entry<String, Integer> wordsEntry : words.entrySet()) {
-                result.append("\n  ").append(wordsEntry.getKey()).append(": ").append(wordsEntry.getValue());
+                result.append("\n  ")
+                        .append(wordsEntry.getKey())
+                        .append(": ")
+                        .append(wordsEntry.getValue());
             }
             result.append("\n");
         }
 
-        return "{" + result + "}";
+        result.append("}");
+
+        return result.toString();
     }
 }
 //END
