@@ -4,12 +4,6 @@ import java.util.Map;
 import java.util.HashMap;
 
 // BEGIN
-
-/**
- *
- *
- *
- */
 class App {
     /**
      * Метод принимает преложение sentence и возвращает словарь слов и их частоты в предложении
