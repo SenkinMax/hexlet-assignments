@@ -1,6 +1,7 @@
 package exercise;
 
-import java.util.*;
+import java.util.Map;
+import java.util.HashMap;
 
 // BEGIN
 
@@ -12,7 +13,7 @@ import java.util.*;
 class App {
     /**
      * Метод принимает преложение sentence и возвращает словарь слов и их частоты в предложении
-     * @param sentence Исходное предложение
+     * @param sentence Исходное предложение.
      * @return Возвращает словарь, где ключи - слова, а значение - частота появления в предложении
      */
     public static Map<String, Integer> getWordCount(String sentence) {
