@@ -5,6 +5,12 @@ import java.util.Arrays;
 
 // BEGIN
 public class App {
+    private static final String[] FREEEMAILS = {
+            "@gmail.com",
+            "@yandex.ru",
+            "hotmail.com"
+    };
+
     public static long getCountOfFreeEmails(List<String> emails) {
         return emails.stream()
                 .filter(App::isFree)
@@ -12,13 +18,7 @@ public class App {
     }
 
     private static boolean isFree(String email) {
-        String[] freeEmails = {
-                "@gmail.com",
-                "@yandex.ru",
-                "hotmail.com"
-        };
-
-        return Arrays.stream(freeEmails).
+        return Arrays.stream(FREEEMAILS).
                 anyMatch(email::contains);
     }
 }
