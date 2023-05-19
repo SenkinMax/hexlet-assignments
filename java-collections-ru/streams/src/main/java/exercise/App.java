@@ -8,7 +8,7 @@ public class App {
     private static final String[] FREE_EMAILS = {
             "@gmail.com",
             "@yandex.ru",
-            "hotmail.com"
+            "@hotmail.com"
     };
 
     public static long getCountOfFreeEmails(List<String> emails) {
