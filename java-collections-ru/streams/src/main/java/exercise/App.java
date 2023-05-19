@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 // BEGIN
 public class App {
-    private static final String[] FREE_MAILS = {
+    private static final String[] FREE_EMAILS = {
             "@gmail.com",
             "@yandex.ru",
             "hotmail.com"
@@ -18,7 +18,7 @@ public class App {
     }
 
     private static boolean isFree(String email) {
-        return Arrays.stream(FREE_MAILS).
+        return Arrays.stream(FREE_EMAILS).
                 anyMatch(email::contains);
     }
 }
