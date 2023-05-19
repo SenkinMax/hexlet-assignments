@@ -18,7 +18,7 @@ public class App {
     }
 
     private static boolean isFree(String email) {
-        return Arrays.stream(FREEEMAILS).
+        return Arrays.stream(FREE_MAILS).
                 anyMatch(email::contains);
     }
 }
