@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 // BEGIN
 public class App {
-    private static final String[] FREEEMAILS = {
+    private static final String[] FREE_MAILS = {
             "@gmail.com",
             "@yandex.ru",
             "hotmail.com"
